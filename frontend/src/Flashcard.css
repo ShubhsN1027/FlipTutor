@@ -1,0 +1,36 @@
+.flashcard {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flashcard-front,
+.flashcard-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+}
+
+.flashcard-front {
+  background: #4a90e2;
+}
+
+.flashcard-back {
+  background: #7ed321;
+  transform: rotateY(180deg);
+}
+
+.flashcard.flipped .flashcard-front {
+  transform: rotateY(180deg);
+}
+
+.flashcard.flipped .flashcard-back {
+  transform: rotateY(0);
+}
